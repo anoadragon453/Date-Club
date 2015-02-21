@@ -5,7 +5,7 @@ public class collisionScript : MonoBehaviour {
 	public GameObject attack;
 	public Sprite questionbutton;
 	public Sprite answerbutton;
-	public GameObject textysexty;
+	public GameObject displayText;
 	public GameObject repoman;
 	public GameObject ansbutt;
 	public string selectedAns;
@@ -263,13 +263,13 @@ void OnCollisionEnter(Collision col){
 				repoman.GetComponent<ControlReputation> ().reputationLevel = curr + score*3;
 
 				/*estionObject = GameObject.Find ("qq");
-				//int r = textysexty.GetComponent<DisplayQuestion>().boxNumber;
+				//int r = displayText.GetComponent<DisplayQuestion>().boxNumber;
 				//Debug.Log(anstxt);
 
 				//int kkk = displayQuestionScript.boxNumber;
 				//Question questemp = (Question)qs.GetComponent<DisplayQuestion> ().questions[kkk];
 			//	Debug.Log(ans);
-				//DisplayQuestion.Question qls = (DisplayQuestion.Question)textysexty.GetComponent<DisplayQuestion> ().questions[kkk];
+				//DisplayQuestion.Question qls = (DisplayQuestion.Question)displayText.GetComponent<DisplayQuestion> ().questions[kkk];
 				//int score = q.getAnswerText(ans).getScore();
 				///float curr = repoman.GetComponent<ControlReputation>().reputationLevel;
 				//epoman.GetComponent<ControlReputation>().reputationLevel = curr+score;
@@ -280,10 +280,10 @@ void OnCollisionEnter(Collision col){
 			move = true;
 			makeNew ();
 			int lol = (int)Random.Range (0, 12);
-			textysexty.GetComponent<DisplayQuestion> ().boxNumber = lol;
-			DisplayQuestion.Question fuck = (DisplayQuestion.Question)textysexty.GetComponent<DisplayQuestion> ().manQuestions [lol];
-			string heh = fuck.getQuestionText ();
-			textysexty.GetComponent<TextMesh> ().text = ResolveTextSize (heh, 27);
+			displayText.GetComponent<DisplayQuestion> ().boxNumber = lol;
+			DisplayQuestion.Question ques1 = (DisplayQuestion.Question)displayText.GetComponent<DisplayQuestion> ().manQuestions [lol];
+			string heh = ques1.getQuestionText ();
+			displayText.GetComponent<TextMesh> ().text = ResolveTextSize (heh, 27);
 		
 		
 		
