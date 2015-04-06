@@ -7,12 +7,12 @@ public class AnimateAcrossScreen : MonoBehaviour {
 	int startcont = 0;
 	double change = 0;
 	void Start () {
-		transform.position = new Vector3 (-15, 7, 0);
+		transform.position = new Vector3 (-15, 4.5f, 0);
 	
 	}
 	void move(){
 		change += .1;
-		Vector3 pos = new Vector3((float)(change-15),7, 0);
+		Vector3 pos = new Vector3((float)(change-15),4.5f, 0);
 		transform.position = pos;
 
 	}
@@ -20,11 +20,11 @@ public class AnimateAcrossScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (startcont > 205) {
-			renderer.enabled = true;
+			GetComponent<Renderer>().enabled = true;
 			move ();
 		}
 		else
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		startcont++;
 	
 	}

@@ -260,6 +260,7 @@ void OnCollisionEnter(Collision col){
 				Debug.Log(anstxt);
 				Debug.Log (score);
 				float curr = repoman.GetComponent<ControlReputation> ().reputationLevel;
+				if((curr +score*2.5) <55)
 				repoman.GetComponent<ControlReputation> ().reputationLevel = curr + score*3;
 
 				/*estionObject = GameObject.Find ("qq");
@@ -276,19 +277,23 @@ void OnCollisionEnter(Collision col){
 */
 			
 			}
-			Destroy (col.gameObject);
-			move = true;
-			makeNew ();
-			int lol = (int)Random.Range (0, 12);
-			displayText.GetComponent<DisplayQuestion> ().boxNumber = lol;
-			DisplayQuestion.Question ques1 = (DisplayQuestion.Question)displayText.GetComponent<DisplayQuestion> ().manQuestions [lol];
-			string heh = ques1.getQuestionText ();
-			displayText.GetComponent<TextMesh> ().text = ResolveTextSize (heh, 27);
+		
 		
 		
 		
 		
 		}
+		Destroy (col.gameObject);
+		move = true;
+		makeNew ();
+		int lol = (int)Random.Range (0, 12);
+		while(lol == displayText.GetComponent<DisplayQuestion>().boxNumber){
+			lol = (int)Random.Range (0, 12);
+		}
+		displayText.GetComponent<DisplayQuestion> ().boxNumber = lol;
+		DisplayQuestion.Question ques1 = (DisplayQuestion.Question)displayText.GetComponent<DisplayQuestion> ().manQuestions [lol];
+		string heh = ques1.getQuestionText ();
+		displayText.GetComponent<TextMesh> ().text = ResolveTextSize (heh, 27);
 	}
 	 void makeNew(){
 	
@@ -296,9 +301,9 @@ void OnCollisionEnter(Collision col){
 	
 		int pos = Random.Range (0, 3);
 		if (pos == 0)
-			transform.position = new Vector3 (15, 5.5f, 0);
+			transform.position = new Vector3 (15, 4.5f, 0);
 		else if (pos == 1)
-			transform.position = new Vector3 (15, 2.75f, 0);
+			transform.position = new Vector3 (15, 2.15f, 0);
 		else {
 			transform.position = new Vector3(15,0.2f,0);
 		}

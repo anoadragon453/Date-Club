@@ -92,10 +92,10 @@ public class ShowMore : MonoBehaviour {
 		sew.setVisible (false);
 		sew.setRigidBody (false);
 		hasBody = false;
-		textbox1.GetComponent<changePos>().setPos(new Vector3(-9.1f, -1.0f,0.0f));
-		textbox2.GetComponent<changePos>().setPos(new Vector3 (-9.1f, -2.5f, 0.0f));
-		textbox3.GetComponent<changePos>().setPos(new Vector3(-4.9f, -1.0f,0.0f));
-		textbox4.GetComponent<changePos>().setPos(new Vector3(-4.9f, -2.5f,0.0f));
+		textbox1.GetComponent<changePos>().setPos(new Vector3(-7.1f, -1.5f,0.0f));
+		textbox2.GetComponent<changePos>().setPos(new Vector3 (-7.1f, -2.5f, 0.0f));
+		textbox3.GetComponent<changePos>().setPos(new Vector3(-3.9f, -1.5f,0.0f));
+		textbox4.GetComponent<changePos>().setPos(new Vector3(-3.9f, -2.5f,0.0f));
 
 		GameObject displayQuestionObject = GameObject.Find ("qq");
 		DisplayQuestion displayQuestionScript = displayQuestionObject.GetComponent<DisplayQuestion> ();
@@ -160,12 +160,12 @@ public class ShowMore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (startcont > 205) {
-			renderer.enabled = visible;
-			collider.enabled = hasBody;
+			GetComponent<Renderer>().enabled = visible;
+			GetComponent<Collider>().enabled = hasBody;
 			//move ();
 		}
 		else
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		if(startcont < 210)
 		startcont++;
 	}

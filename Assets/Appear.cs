@@ -11,9 +11,9 @@ public class Appear : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	if (starts > 205)
-			renderer.enabled = true;
+			GetComponent<Renderer>().enabled = true;
 	else {
-			renderer.enabled=false;
+			GetComponent<Renderer>().enabled=false;
 		}
 		starts++;
 	}

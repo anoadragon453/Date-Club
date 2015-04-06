@@ -12,8 +12,8 @@ public class ControlReputation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (reputationLevel > 0)
-			transform.localScale = new Vector3 (reputationLevel / 200, transform.localScale.y, transform.localScale.z);
+		if (reputationLevel > 0 &&reputationLevel <100)
+			transform.localScale = new Vector3 (reputationLevel / 100, transform.localScale.y, transform.localScale.z);
 		else
 			Application.LoadLevel ("DeathScene");
 	}

@@ -30,17 +30,17 @@ public class MoveDragAndDrop : MonoBehaviour {
 
 		}
 		if (!drag && !stopMoving) {
-			renderer.enabled = true;
+			GetComponent<Renderer>().enabled = true;
 			mousePosition = Input.mousePosition;
 			mousePosition = Camera.main.ScreenToWorldPoint (mousePosition);
 			transform.position = Vector2.Lerp (mousePosition, mousePosition, moveSpeed);
 		}
 		if (stopMoving) {
 			if(mousePosition.y > 4.125)
-				transform.position = new Vector3(-8.5f, 5.5f, 0);
+				transform.position = new Vector3(-8.5f, 4.5f, 0);
 				
 			else if(mousePosition.y < 4.125 && mousePosition.y > 1.375)
-				transform.position = new Vector3(-8.5f,2.75f,0);
+				transform.position = new Vector3(-8.5f,2.15f,0);
 			else
 				transform.position = new Vector3(-8.5f,0.2f,0);
 		

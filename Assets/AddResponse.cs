@@ -24,11 +24,11 @@ public class AddResponse : MonoBehaviour {
 		Instantiate(answer, transform.position, transform.rotation);
 		}
 		if (startcont > 205) {
-			renderer.enabled = true;
+			GetComponent<Renderer>().enabled = true;
 			//move ();
 		}
 		else
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		startcont++;
 
 		

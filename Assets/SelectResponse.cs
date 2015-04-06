@@ -17,9 +17,9 @@ public class SelectResponse : MonoBehaviour {
 
 		int pos = Random.Range (0, 3);
 		if (pos == 0)
-			transform.position = new Vector3 (15, 5.5f, 0);
+			transform.position = new Vector3 (15, 4.5f, 0);
 		else if (pos == 1)
-			transform.position = new Vector3 (15, 2.75f, 0);
+			transform.position = new Vector3 (15, 2.155f, 0);
 		else {
 			transform.position = new Vector3(15,0.2f,0);
 		}
@@ -35,9 +35,9 @@ public class SelectResponse : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().sprite = answerbutton;
 		int pos = Random.Range (0, 3);
 		if (pos == 0)
-			transform.position = new Vector3 (15, 5.5f, 0);
+			transform.position = new Vector3 (15, 4.5f, 0);
 		else if (pos == 1)
-			transform.position = new Vector3 (15, 2.75f, 0);
+			transform.position = new Vector3 (15, 2.15f, 0);
 		else {
 			transform.position = new Vector3(15,0.2f,0);
 		}

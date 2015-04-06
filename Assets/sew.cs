@@ -35,10 +35,10 @@ public class sew : MonoBehaviour {
 		ShowMore.setRigidBody (false);
 		hasBody = false;
 		//show.setShowButton(false);
-		textbox1.GetComponent<changePos>().setPos(new Vector3(-9.1f, -1.0f,0.0f));
-		textbox2.GetComponent<changePos>().setPos(new Vector3 (-9.1f, -2.5f, 0.0f));
-		textbox3.GetComponent<changePos>().setPos(new Vector3(-4.9f, -1.0f,0.0f));
-		textbox4.GetComponent<changePos>().setPos(new Vector3(-4.9f, -2.5f,0.0f));
+		textbox1.GetComponent<changePos>().setPos(new Vector3(-7.1f, -1.5f,0.0f));
+		textbox2.GetComponent<changePos>().setPos(new Vector3 (-7.1f, -2.5f, 0.0f));
+		textbox3.GetComponent<changePos>().setPos(new Vector3(-3.9f, -1.5f,0.0f));
+		textbox4.GetComponent<changePos>().setPos(new Vector3(-3.9f, -2.5f,0.0f));
 		int lol = (int)Random.Range(0,12);
 		t1.GetComponent<DisplayQuestion>().boxNumber = lol;
 		DisplayQuestion.Question fuck = (DisplayQuestion.Question)t1.GetComponent<DisplayQuestion>().manQuestions[lol];
@@ -102,12 +102,12 @@ public class sew : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (startcont > 205) {
-			renderer.enabled = visible;
-			collider.enabled = hasBody;
+			GetComponent<Renderer>().enabled = visible;
+			GetComponent<Collider>().enabled = hasBody;
 			//move ();
 		}
 		else
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		if(startcont < 210)
 			startcont++;
 	}

@@ -248,9 +248,9 @@ public class DisplayQuestion : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (startcont > 205)
-			renderer.enabled = true;
+			GetComponent<Renderer>().enabled = true;
 		else
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		startcont++;
 	}
 }

@@ -101,12 +101,12 @@ public class show : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (startcont > 205) {
-			renderer.enabled = visible;
-			collider.enabled = hasBody;
+			GetComponent<Renderer>().enabled = visible;
+			GetComponent<Collider>().enabled = hasBody;
 			//move ();
 		}
 		else
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		if(startcont < 210)
 			startcont++;
 	}

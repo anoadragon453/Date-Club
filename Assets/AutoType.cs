@@ -19,7 +19,7 @@ public class AutoType : MonoBehaviour {
 		foreach (char letter in message.ToCharArray()) {
 			textObject.text += letter;
 			if (sound)
-				audio.PlayOneShot (sound);
+				GetComponent<AudioSource>().PlayOneShot (sound);
 			yield return 0;
 			yield return new WaitForSeconds (letterPause);
 		}      

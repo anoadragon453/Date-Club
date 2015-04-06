@@ -6,15 +6,15 @@ public class OpponentAnimation : MonoBehaviour {
 	// Use this for initialization
 	int startcont = 0;
 	double change = 0;
-	int startPos;
+	float startPos;
 	void Start () {
 		int rand = Random.Range(1, 4);
 		if (rand < 2)
-			startPos = 3;
+			startPos = .2f;
 		else if (rand ==2)
-			startPos = 5;
+			startPos = 2.15f;
 		else 
-			startPos = 7;
+			startPos = 4.3f;
 
 		//else if(rand > 3)
 		//	startPos = 7;
@@ -34,11 +34,11 @@ public class OpponentAnimation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (startcont > 205) {
-			renderer.enabled = true;
+			GetComponent<Renderer>().enabled = true;
 			move ();
 		}
 		else
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 		startcont++;
 		
 	}

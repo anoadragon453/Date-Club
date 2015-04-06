@@ -46,7 +46,7 @@ public class DragText : MonoBehaviour {
 			otherbox3.GetComponent<changePos>().setPos(new Vector3(-20.0f, -20.0f,0.0f));
 			otherbox1.GetComponent<changePos>().setPos(new Vector3(-20.0f, -20.0f,0.0f));
 			count++;
-			renderer.enabled = true;
+			GetComponent<Renderer>().enabled = true;
 			mousePosition = Input.mousePosition;
 			mousePosition = Camera.main.ScreenToWorldPoint (mousePosition);
 			button.transform.position = Vector2.Lerp (mousePosition, mousePosition, moveSpeed);
